@@ -1,0 +1,14 @@
+Zeus::ZInstall::Common::get_password:Please choose a password for the admin server=zeus
+Zeus::ZInstall::Common::get_password:Re-enter=zeus
+admin!password=zeus
+selfreg!register=N
+start_at_boot=Y
+zxtm!cluster=C
+zxtm!group=nobody
+zxtm!license_key=
+zxtm!name_setname=1
+zxtm!unique_bind=N
+zxtm!user=nobody
+accept-license=accept
+zeushome=/usr/local/zeus
+zxtm!perform_initial_config=Y
