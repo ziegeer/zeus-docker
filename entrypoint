@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "$0 $@"
+
+if [ ! -f /usr/local/zeus/docker.done ]; then
+	/usr/local/zeus/zxtm/configure --noninteractive --noloop --replay-from=/usr/local/zeus/zconfig.txt
+    echo -e "developer_mode_accepted\tyes" >> /usr/local/zeus/zxtm/global.cfg
+	touch /usr/local/zeus/docker.done
+else
+	/usr/local/zeus/start-zeus
+fi
+
+# Print the password and wait for SIGTERM
+trap "Caught SIGTERM" SIGTERM
+tail -f /dev/null &
+wait $!
+/usr/local/zeus/stop-zeus
+echo "Container Stopped"
