@@ -11,3 +11,6 @@
 When running on a Mac, you will want to include opening the ports via the -p param. For example:
 
 `docker run -d -p 9090:9090 <container-name> <image-name>`
+
+# Login
+Login is admin / zeus
